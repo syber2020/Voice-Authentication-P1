@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  {% if current_user.is_authenticated %}
+    <p>Hi {{ current_user.username }}!</p>
+  {% else %}
+    <h1> Welcome to Voice Biometric Autentication!</h1>
+    <img src="../static/biometrics.jpg" alt="">
+    <p>Please login or register!</p>
+  {% endif %}
+</div>
+
+{% endblock %}
