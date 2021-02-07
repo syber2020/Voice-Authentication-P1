@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<style type="text/css">
+            label, input {
+                display: block;
+            }
+            span.helptext {
+                display: none;
+            }
+            body {
+             background: url('{% static "img/login.jpg" %}') no-repeat center center fixed;
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;
+            }
+    </style>
+
+<body>
+
+<center style = "color:white"><h1> Your identifications is predicted </h1></center>
+<!-- <center style = "color:white"><h2>Now going ahead with authentication </h2><center>
+
+<center style = "color:white"><h2> It is time to identify yourself </h2></center><button>Click to Identify</button> -->
+<center style = "color:white">
+
+<!-- {'Syed':2, 'Himanshu':1, 'Abiola':0}) -->
+
+{% ifequal preds 0%}
+      <img src="{% static "img/Abiola.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity answer is Abiola</h2></div>
+{% endifequal %}
+{% ifequal preds 1%}
+      <img src="{% static "img/Himanshu.jpg" %}" width="400" height="400">
+
+      <div> <h2>Your predicted identity is Himanshu</h2></div>
+      <div>Himanshu is a phD student and loves sleeping all the time</div>
+      <div>He is among one of the AI students of Dr. Albert</div>
+      <div>______________GOOD_LUCK_________________</div>
+      
+{% endifequal %}
+
+{% ifequal preds 2%}
+      <img src="{% static "img/Syed.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity is Syed</h2></div>
+{% endifequal %}
+{% ifequal preds 3%}
+      <img src="{% static "img/Tanuja.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity is Tanuja</h2></div>
+{% endifequal %}
+<!-- {% ifequal preds 4%}
+      <img src="{% static "img/Tanuja.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity is Tanuja</h2></div>
+{% endifequal %}
+ -->
+{% ifequal preds 4%}
+      <img src="{% static "img/Yeswanth.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity is Yeswanth</h2></div>
+{% endifequal %}
+
+<!-- {% ifequal preds 6%}
+      <img src="{% static "img/Himanshu.jpg" %}" width="400" height="400">
+      <div> <h2>Your predicted identity is Syed</h2></div>
+{% endifequal %} -->
+
+</center>
+</body>
+</html>

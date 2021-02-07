@@ -1,0 +1,41 @@
+<!-- howdy/templates/about.html -->
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Authnticator</title>
+    </head>
+    <style type="text/css">
+            label, input {
+                display: block;
+            }
+            span.helptext {
+                display: none;
+            }
+            body {
+             background: url('{% static "img/login.jpg" %}') no-repeat center center fixed;
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;
+            }
+    </style>
+
+    <body>
+
+    <center style = "color:white"> <h1>Welcome Speaker Recognition System</h1></center>
+   <center> <p style = "color:white">
+   A Simple application to perform speaker recognition based on audio recorded from your voice.
+
+
+   Speaker recognition is a two step process.
+   First we need to get your audio recorded, And your identity will be automatically detected.
+
+
+
+
+    </p>
+    <button><center><a href="/PredictEngine">Record Your Audio & Predict Identity</a></center></button>
+    </body>
+</html>
