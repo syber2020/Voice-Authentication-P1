@@ -1,0 +1,26 @@
+<!--users/templates/base.html-->
+{% load static %}
+
+<style type="text/css">
+        label, input {
+            display: block;
+        }
+        span.helptext {
+            display: none;
+        }
+        body {
+         background: url('{% static "img/4K.jpg" %}') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+</style>
+
+
+
+
+<center><h1 style ="color:white",>Welcome to Biometric Authentication System</h1></center>
+
+{% block content %}
+{% endblock %}

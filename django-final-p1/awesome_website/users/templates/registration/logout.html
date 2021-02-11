@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+
+
+<center><h1 style = "color:white" > You have logged lot </h1></center>
+
+<center><h1 style = "color:white" > Please click the below button to log back in </h1></center>
+
+<center><button><a href="{% url 'login' %}" style ="color:white">Login</a></button></center>
+
+{% endblock %}

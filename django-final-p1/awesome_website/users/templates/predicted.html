@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<style type="text/css">
+            label, input {
+                display: block;
+            }
+            span.helptext {
+                display: none;
+            }
+            body {
+             background: url('{% static "img/glass.jpg" %}') no-repeat center center fixed;
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;
+            }
+    </style>
+
+<body><center>
+
+
+<!-- <center style = "color:white"><h1> Your identifications is predicted </h1></center> -->
+<!-- <center style = "color:white"><h2>Now going ahead with authentication </h2><center>
+
+<center style = "color:white"><h2> It is time to identify yourself </h2></center><button>Click to Identify</button> -->
+
+
+  {% ifequal preds "abiola" %}
+
+        <img src="{% static "img/Abiola.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white" >Welcome to UNT Abiola</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+  {% ifequal preds "himanshu" %}
+        <img src="{% static "img/Himanshu.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white">Welcome to UNT Himanshu</h2></div>
+        <div style = "color:white">Himanshu is a phD student and loves sleeping all the time</div>
+        <div style = "color:white">He is among one of the AI students of Dr. Albert</div>
+        <div style = "color:white">______________GOOD_LUCK_________________</div>
+  {% endifequal %}
+
+  {% ifequal preds "syed" %}
+        <img src="{% static "img/test.jpg" %}" width="300" height="300">
+        <div > <h2 style = "color:white">Welcome to UNT Syed</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+  {% ifequal preds "tanuja" %}
+        <img src="{% static "img/Tanuja.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white">Welcome to UNT Tanuja</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+  {% ifequal preds "yeswanth" %}
+        <img src="{% static "img/Yeswanth.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white">Welcome to UNT Yeswanth</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+  {% ifequal preds "Mahan" %}
+        <img src="{% static "img/Mahan.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white">Welcome to UNT Mahan</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+  {% ifequal preds "unindetified" %}
+        <img src="{% static "img/Himanshu.jpg" %}" width="300" height="300">
+        <div> <h2 style = "color:white">Your predicted identity is Syed</h2></div>
+        <center><button><a href="{% url 'login' %}", >Logout</a></button></center>
+  {% endifequal %}
+
+</center>
+</body>
+</html>
