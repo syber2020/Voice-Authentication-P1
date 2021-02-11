@@ -1,0 +1,35 @@
+<!--users/templates/registration/login.html-->
+
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+
+
+<div styles="text-align:center"><center style= "color:white"><h1>Login</h1></center></div>
+
+<div styles="text-align:center"><center style= "color:white"><h2>Authenticating to This System is A Two Step process</h2></center></div> 
+
+
+<div styles="text-align:center"><center style= "color:white"><h2>First login with your username password below</h2></center></div> 
+
+<center><form style ="color:white", method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login">
+</form></center></div>
+
+
+<center><button><a href="{% url 'dashboard' %}">Back to dashboard</a></center></button></center>
+
+
+<center><button><a href="{% url 'password_reset' %}">Reset password</a></button></center>
+
+
+
+<div styles="text-align:center"><center style= "color:white"><h2>If you are new to the system please register</h2></center></div> 
+
+<center><button><a href="{% url 'register' %}">Register</a></button></center>
+{% endblock %}
